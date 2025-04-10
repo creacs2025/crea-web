@@ -1,0 +1,41 @@
+/* objetivos.css */
+
+/* Animación general para todas las cards */
+.objetivo-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .objetivo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Cultura - Amarillo */
+  .objetivo-cultura {
+    border-left-color: #f5a215;
+    color: #f5a215;
+  }
+  
+  /* Deportes - Azul */
+  .objetivo-deportes {
+    border-left-color: #0f436b;
+    color: #0f436b;
+  }
+  
+  /* Ecología - Verde */
+  .objetivo-ecologia {
+    border-left-color: #379356;
+    color: #379356;
+  }
+  
+  /* Pastoral - Rojo */
+  .objetivo-pastoral {
+    border-left-color: #885c3f;
+    color: #885c3f;
+  }
+  
+  /* Mejora Institucional - Naranja fuerte */
+  .objetivo-mejora {
+    border-left-color: #df3623;
+    color: #df3623;
+  }

@@ -1,0 +1,95 @@
+.card-list .card-item {
+    list-style: none;
+}
+
+  
+.card-list .card-item .card-link {
+    user-select: none;
+    max-width: 400px;   /* Límite de ancho máximo */
+    width: 100%;        /* Para que en mobile sea full width */
+    margin: 0 auto;     /* Centrado horizontal */
+    width: 400;
+    display: block;
+    background: #fff;  
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition:  0.2 ease;
+}
+
+@media (min-width: 1024px) {
+    .card-list .card-item .card-link {
+      max-width: 350px;
+    }
+  }
+
+.card-list .card-item .card-link:hover{
+    border-color: #df4d3c;
+
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: #df4d3c;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    margin: 16px 0 18px;
+    background:#DDE4FF;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color:#000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: #df4d3c;
+    border-radius: 50%;
+    margin:30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #df4d3c;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: #df4d3c;
+
+
+
+}
+
+
+/* Puntitos Swiper */
+.swiper-pagination-bullet {
+    background-color: #e33925 !important;
+    opacity: 1 !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #e33925 !important;
+  }
+
+  
+/* Flechas Swiper */
+.swiper-button-next, 
+.swiper-button-prev {
+  color: #e33925 !important;
+}

@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import LandingHeader from "../components/LandingHeader.astro"
+import FirstSection from "../components/FirstSection.astro"
+import CreaSection from "../components/CreaSection.astro"
+import EquipoSection from "../components/EquipoSection.astro"
+import EquipoNSection from "../components/EquipoNSection.astro"
+import PilaresNSection from "../components/PilaresNSection.astro"
+import PropuestasSection from "../components/PropuestasSection.astro"
+import ObjetivosSection from "../components/ObjetivosSection.astro"
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+	<LandingHeader/>
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+		<div class="snap-center">
+			<FirstSection />
+		</div>
+		<div class="snap-center">
+			<CreaSection />
+		</div>
+		<div class="snap-center">
+			<EquipoNSection />
+		</div>
+		<div class="snap-center">
+			<PilaresNSection />
+		</div>
+		<div class="snap-center">
+			<ObjetivosSection/>
+		</div>
+	
+		
+
+	</main>
+	
+	  
+	  
+  </main>
 </Layout>

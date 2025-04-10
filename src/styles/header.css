@@ -1,0 +1,34 @@
+/* header.css */
+
+.header-glass {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-glass nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .header-glass nav ul li a {
+    color: #323131;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header-glass nav ul li a:hover {
+    color: #f5a215;
+  }
+  
