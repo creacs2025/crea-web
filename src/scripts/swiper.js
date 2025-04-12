@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-const swiper = new Swiper('.card-wrapper', {
+const swiper = new Swiper('.swiper', {
   loop: true,
   spaceBetween: 30,
   slidesPerView: 1,
