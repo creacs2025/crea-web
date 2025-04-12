@@ -35,24 +35,30 @@
      Colores Permanentes en Enlaces (para ambos menús)
      ========================= */
   
+
   .header-glass nav ul li a.hover-inicio,
   .off-screen-menu ul li a.hover-inicio {
-    color: #f5a215;
+    color: #1abc9c;
   }
   
   .header-glass nav ul li a.hover-nosotros,
   .off-screen-menu ul li a.hover-nosotros {
-    color: #1abc9c;
+    color: #3498db;
   }
   
+  .header-glass nav ul li a.hover-equipo,
+  .off-screen-menu ul li a.hover-equipo {
+    color: #e23623;
+  }
+
   .header-glass nav ul li a.hover-pilares,
   .off-screen-menu ul li a.hover-pilares {
-    color: #3498db;
+    color: #f5a215;
   }
 
   .header-glass nav ul li a.hover-objetivos,
   .off-screen-menu ul li a.hover-objetivos {
-    color: #e74c3c;
+    color: #507ce1;
   }
   
   .header-glass nav ul li a.hover-propuestas,

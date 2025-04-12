@@ -1,42 +1,36 @@
 <section 
-id="inicio" 
-class="relative h-screen flex flex-col md:flex-row items-center justify-between px-10 overflow-hidden pt-[250px] bg-gradient-to-b from-white via-white to-[#c4e675]/70">
-  
-  <!-- TEXTO A LA IZQUIERDA -->
-  <div class="w-full md:w-1/2 text-left animate-fade-in md:mt-0 z-10 md:ml-30 mx-auto px-4">
-    <!-- TÍTULO -->
-    <h1 class="text-6xl font-montserrat font-bold text-[#369037] leading-tight transition-all duration-300 hover:-translate-y-2">
+  id="inicio" 
+  class="relative min-h-screen flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-16 pt-40 bg-gradient-to-b from-white via-white to-[#c4e675]/70 overflow-hidden"
+>
+  <!-- TEXTO -->
+  <div class="w-full md:w-1/2 z-10 text-center md:text-left animate-fade-in">
+    <h1 class="text-5xl md:text-7xl font-montserrat font-bold text-[#369037] leading-tight transition-transform duration-300 hover:-translate-y-2">
       ¡Creamos Juntos!
     </h1>
-    <!-- PÁRRAFO -->
-    <p class="mt-6 text-2xl text-[#4a414e] transition-all duration-300 hover:-translate-y-2">
+    <p class="mt-6 text-xl md:text-2xl text-[#4a414e] transition-transform duration-300 hover:-translate-y-2">
       Más diversión. Más ideas. Más soluciones.
     </p>
-    <!-- BOTÓN -->
-    <a href="#propuestas" class="inline-block mt-8 px-6 py-3 bg-[#dc3619] text-white text-xl font-semibold rounded-2xl hover:bg-[#e53c30] transition-all duration-300 hover:-translate-y-2">
+    <a 
+      href="#propuestas" 
+      class="inline-block mt-8 px-8 py-4 bg-[#dc3619] text-white text-lg md:text-xl font-semibold rounded-2xl hover:bg-[#e53c30] transition-transform duration-300 hover:-translate-y-2"
+    >
       Ver Propuestas
     </a>
   </div>
-  
-  <!-- CAPIBARA -->
-  <div class="w-full md:w-1/2 flex justify-end mt-20 md:mt-0 animate-slide-up relative">
-    
-    <!-- Versión Mobile -->
-    <img
-      src="/creapibara.webp"
-      alt="Mascota Creapibara"
-      class="block md:hidden w-[350px] object-contain transform translate-x-[120px] translate-y-[-120px] capy-anim"
-    >
-    
-    <!-- Versión Desktop -->
-    <img
-      src="/creapibara.webp"
-      alt="Mascota Creapibara"
-      class="hidden md:block md:max-w-[700px] w-full object-contain transform translate-x-[-0px] translate-y-10 capy-anim"
-    >
-  
-  </div>
 
+  <!-- IMAGEN -->
+  <div class="w-full md:w-1/2 relative flex justify-center md:justify-end animate-slide-up">
+    <picture>
+      <!-- Mobile -->
+      <source media="(max-width: 767px)" srcset="/creapibara.webp" />
+      <!-- Desktop -->
+      <img
+        src="/creapibara.webp"
+        alt="Mascota Creapibara"
+        class="w-[300px] md:w-[600px] object-contain translate-x-6 md:translate-x-0 translate-y-[-80px] md:translate-y-10 capy-anim"
+      />
+    </picture>
+  </div>
 </section>
 
 <style>
@@ -49,6 +43,6 @@ class="relative h-screen flex flex-col md:flex-row items-center justify-between 
     }
   }
   .capy-anim {
-    animation: sombraCapibara 3s infinite;
+    animation: sombraCapibara 3s ease-in-out infinite;
   }
 </style>
