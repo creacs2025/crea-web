@@ -1,20 +1,55 @@
 ---
 import Logo from "./Logo.astro";
 import '../styles/header.css';
-
 ---
 
 <header class="header-glass">
-  <div class="flex h-28">
+  <div class="flex">
     <Logo />
   </div>
   <nav>
-    <ul class="flex space-x-4 text-black">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Nosotros</a></li>
-      <li><a href="#">Pilares</a></li>
-      <li><a href="#">Propuestas</a></li>
-      <li><a href="#">Contacto</a></li>
+    <!-- Menú de escritorio (solo en pantallas grandes) -->
+    <ul class="desktop-menu flex space-x-4 text-black text-lg">
+      <li><a href="#inicio" class="hover-inicio">Inicio</a></li>
+      <li><a href="#nosotros" class="hover-nosotros">Nosotros</a></li>
+      <li><a href="#pilares" class="hover-pilares">Pilares</a></li>
+      <li><a href="#objetivos" class="hover-objetivos">Objetivos</a></li>
+      <li><a href="#propuestas" class="hover-propuestas">Propuestas</a></li>
     </ul>
+
+    <!-- Menú hamburguesa para móviles -->
+    <div class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
+
+  <!-- Menú lateral off-screen (para móviles) -->
+  <div class="off-screen-menu">
+    <ul>
+      <li><a href="#inicio" class="hover-inicio">Inicio</a></li>
+      <li><a href="#nosotros" class="hover-nosotros">Nosotros</a></li>
+      <li><a href="#pilares" class="hover-pilares">Pilares</a></li>
+      <li><a href="#objetivos" class="hover-objetivos">Objetivos</a></li>
+      <li><a href="#propuestas" class="hover-propuestas">Propuestas</a></li>
+    </ul>
+  </div>
 </header>
+
+<script lang="js">
+  const hamMenu = document.querySelector('.ham-menu');
+  const offScreenMenu = document.querySelector('.off-screen-menu');
+
+  // Alternar la apertura y cierre del menú móvil al hacer clic en el botón hamburguesa
+  hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+  });
+  
+  // También se cierra al hacer clic en cualquier parte del menú lateral
+  offScreenMenu.addEventListener('click', () => {
+    hamMenu.classList.remove('active');
+    offScreenMenu.classList.remove('active');
+  });
+</script>

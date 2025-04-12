@@ -1,34 +1,172 @@
-/* header.css */
+/* =========================
+   Header y Pseudo-elemento Blur
+   ========================= */
 
-.header-glass {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1rem 1.5rem;
+   .header-glass {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 50;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .header-glass nav ul {
-    display: flex;
-    gap: 1rem;
+  .header-glass::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 17px); /* Deja espacio para la scrollbar */
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    pointer-events: none;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
   }
   
-  .header-glass nav ul li a {
-    color: #323131;
-    font-size: 1.1rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
+  /* =========================
+     Colores Permanentes en Enlaces (para ambos menús)
+     ========================= */
   
-  .header-glass nav ul li a:hover {
+  .header-glass nav ul li a.hover-inicio,
+  .off-screen-menu ul li a.hover-inicio {
     color: #f5a215;
+  }
+  
+  .header-glass nav ul li a.hover-nosotros,
+  .off-screen-menu ul li a.hover-nosotros {
+    color: #1abc9c;
+  }
+  
+  .header-glass nav ul li a.hover-pilares,
+  .off-screen-menu ul li a.hover-pilares {
+    color: #3498db;
+  }
+
+  .header-glass nav ul li a.hover-objetivos,
+  .off-screen-menu ul li a.hover-objetivos {
+    color: #e74c3c;
+  }
+  
+  .header-glass nav ul li a.hover-propuestas,
+  .off-screen-menu ul li a.hover-propuestas {
+    color: #1abc9c;
+  }
+  
+  /* =========================
+     Menú Lateral Off-screen (Móvil) con Efecto Glass y Texto Justificado
+     ========================= */
+  
+     .off-screen-menu {
+      width: 70%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      transition: 0.3s ease;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding-top: 30vh;
+      padding-left: 20px;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    
+  
+  .off-screen-menu.active {
+    right: 0;
+  }
+  
+  .off-screen-menu ul li a {
+    font-size: 1.5rem; /* Texto más pequeño */
+    text-decoration: none;
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  /* =========================
+     Menú Hamburguesa (Asegurando que NO se vea afectado por el Blur)
+     ========================= */
+  
+  .ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    z-index: 100; /* Se eleva para asegurarse que está por encima del pseudo-elemento */
+  }
+  
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+  
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+  
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+  
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  /* =========================
+     Menú de Escritorio (Solo en Pantallas Grandes)
+     ========================= */
+  
+  .desktop-menu {
+    display: flex;
+  }
+  
+  /* =========================
+     Responsive: Móviles (oculta menú de escritorio y muestra menú móvil)
+     ========================= */
+  
+  .ham-menu,
+  .off-screen-menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+    
+    .ham-menu,
+    .off-screen-menu {
+      display: block;
+    }
   }
   
