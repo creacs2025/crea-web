@@ -8,7 +8,6 @@
     max-width: 400px;   /* Límite de ancho máximo */
     width: 100%;        /* Para que en mobile sea full width */
     margin: 0 auto;     /* Centrado horizontal */
-    width: 400;
     display: block;
     background: #fff;  
     padding: 18px;
@@ -17,6 +16,12 @@
     border: 2px solid transparent;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     transition:  0.2 ease;
+
+}
+
+
+.card-list .card-item .card-link {
+  cursor: grabbing;
 }
 
 @media (min-width: 1024px) {
@@ -66,6 +71,8 @@
     border: 2px solid #df4d3c;
     transform: rotate(-45deg);
     transition: 0.4s ease;
+    margin-top: 400;
+
 }
 
 .card-list .card-link:hover .card-button{
@@ -76,20 +83,40 @@
 
 }
 
-
-/* Puntitos Swiper */
-.swiper-pagination-bullet {
-    background-color: #e33925 !important;
-    opacity: 1 !important;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #e33925 !important;
-  }
-
-  
-/* Flechas Swiper */
-.swiper-button-next, 
-.swiper-button-prev {
-  color: #e33925 !important;
+.card-wrapper .swiper-pagination-bullet{
+  height: 9px;
+  width: 9px;
+  opacity: 0.5;
+  background: #df4d3c;
 }
+
+.card-wrapper .swiper-pagination-bullet-active{
+  opacity: 1;
+  height: 13px;
+  width: 13px;
+}
+
+  
+.swiper-slide-button{
+  opacity: 0.5px;
+
+}
+
+.card-wrapper .swiper-slide-button {
+  color: #df4d3c;
+  margin-top: 40px; /* margen positivo para separarlas de las cards */
+  transform: none;
+}
+
+
+
+@media screen and (max-width:768px){
+    .card-wrapper{
+      margin: 0-10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button{
+      display: none;
+    }
+}
+

@@ -1,126 +1,119 @@
-<section
-  id="nuestro-equipo"
-  class="min-h-screen py-20 px-6 bg-gradient-to-b from-white to-[#c4e675]/70"
->
-  <!-- TÍTULO ARRIBA -->
-  <h2
-    class="text-4xl md:text-5xl font-montserrat font-bold text-center text-[#f79227] mb-20"
-  >
-    Nuestro Equipo
-  </h2>
+---
+import "../styles/card.css";
+import 'swiper/css/bundle';
+---
 
-  <!-- CONTENEDOR GENERAL -->
-  <div class="flex flex-col md:flex-row justify-between items-start gap-16">
-    <!-- GRID 3x2 A LA IZQUIERDA, MÁS SEPARADAS -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <!-- Alfonso -->
-      <div
-        class="w-56 p-3 bg-white border-2 border-[#f79227] rounded-xl transform transition-all hover:-translate-y-2 hover:scale-105 duration-300 shadow-lg hover:shadow-[#1b6585]/50"
-      >
-        <img
-          class="h-36 object-cover rounded-xl"
-          src="/alfonso.webp"
-          alt="Alfonso Suarez"
-        />
-        <div class="p-2 text-center">
-          <h3 class="font-bold text-lg">Alfonso Suarez</h3>
-          <p class="text-sm text-gray-600">Presidente</p>
-          <p class="text-xs text-gray-500 mt-1">5to B Secundaria</p>
-        </div>
-      </div>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 
-      <!-- Annya -->
-      <div
-        class="w-56 p-3 bg-white border-2 border-[#f79227] rounded-xl transform transition-all hover:-translate-y-2 hover:scale-105 duration-300 shadow-lg hover:shadow-[#1b6585]/50"
-      >
-        <img
-          class="h-36 object-cover rounded-xl"
-          src="/equipo/annya.webp"
-          alt="Annya Culquicondor"
-        />
-        <div class="p-2 text-center">
-          <h3 class="font-bold text-lg">Annya Culquicondor</h3>
-          <p class="text-sm text-gray-600">Vicepresidenta</p>
-          <p class="text-xs text-gray-500 mt-1">5to B Secundaria</p>
-        </div>
-      </div>
+<section class="flex justify-center min-h-[calc(100vh-140px)] bg-gradient-to-b from-white to-[#e99f89] py-40 px-4 scroll-mt-32 sm:scroll-mt-0">
+  
+  <div class="container text-center">
+    <h1 class="text-4xl font-bold text-[#df3623] mb-12">Nuestro Equipo</h1>
 
-      <!-- Diego -->
-      <div
-        class="w-56 p-3 bg-white border-2 border-[#f79227] rounded-xl transform transition-all hover:-translate-y-2 hover:scale-105 duration-300 shadow-lg hover:shadow-[#1b6585]/50"
-      >
-        <img
-          class="h-36 object-cover rounded-xl"
-          src="/equipo/diego.webp"
-          alt="Diego Sanchez"
-        />
-        <div class="p-2 text-center">
-          <h3 class="font-bold text-lg">Diego Sanchez</h3>
-          <p class="text-sm text-gray-600">Secretario</p>
-          <p class="text-xs text-gray-500 mt-1">5to B Secundaria</p>
-        </div>
-      </div>
+    <div class="swiper card-wrapper">
+      <ul class="swiper-wrapper card-list ">
+        <!-- tus li swiper-slide tal cual están -->
+        <li class="swiper-slide card-item">
+            <a href="#" class="card-link">
+              <img src="/alfonso.png" alt="Alfonso Card" class="card-image">
+              <p class="badge">Presidente</p>
+              <h2 class="card-title">Alfonso Suárez</h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+  
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="/annya.png" alt="Annya Card" class="card-image">
+              <p class="badge">Vicepresidente</p>
+              <h2 class="card-title">Annya Culquicondor</h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+  
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="/diego.png" alt="Diego Card" class="card-image">
+              <p class="badge">Secretario</p>
+              <h2 class="card-title">Diego Sanchez</h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+  
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="/valentino.png" alt="Valentino Card" class="card-image">
+              <p class="badge">Delegado de Cultura</p>
+              <h2 class="card-title">Valentino Cabrera</h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+  
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="/samantha.png" alt="Samantha Card" class="card-image">
+              <p class="badge">Delegada de Ecología</p>
+              <h2 class="card-title">Samantha Guzmán</h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+  
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="/pulido.png" alt="Pulido Card" class="card-image">
+              <p class="badge">Delegado de Pastoral</p>
+              <h2 class="card-title">José Francisco Pulido</h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+      </ul>
 
-      <!-- Valentino -->
-      <div
-        class="w-56 p-3 bg-white border-2 border-[#f79227] rounded-xl transform transition-all hover:-translate-y-2 hover:scale-105 duration-300 shadow-lg hover:shadow-[#1b6585]/50"
-      >
-        <img
-          class="h-36 object-cover rounded-xl"
-          src="/equipo/valentino.webp"
-          alt="Valentino Cabrera"
-        />
-        <div class="p-2 text-center">
-          <h3 class="font-bold text-lg">Valentino Cabrera</h3>
-          <p class="text-sm text-gray-600">
-            Delegado de Cultura, Recreación y Deportes
-          </p>
-          <p class="text-xs text-gray-500 mt-1">4to B Secundaria</p>
-        </div>
-      </div>
-
-      <!-- Samantha -->
-      <div
-        class="w-56 p-3 bg-white border-2 border-[#f79227] rounded-xl transform transition-all hover:-translate-y-2 hover:scale-105 duration-300 shadow-lg hover:shadow-[#1b6585]/50"
-      >
-        <img
-          class="h-36 object-cover rounded-xl"
-          src="/equipo/samantha.webp"
-          alt="Samantha Guzman"
-        />
-        <div class="p-2 text-center">
-          <h3 class="font-bold text-lg">Samantha Guzman</h3>
-          <p class="text-sm text-gray-600">
-            Delegada de Ecología y Conservación Ambiental
-          </p>
-          <p class="text-xs text-gray-500 mt-1">3ero B Secundaria</p>
-        </div>
-      </div>
-
-      <!-- Jose Francisco -->
-      <div
-        class="w-56 p-3 bg-white border-2 border-[#f79227] rounded-xl transform transition-all hover:-translate-y-2 hover:scale-105 duration-300 shadow-lg hover:shadow-[#1b6585]/50"
-      >
-        <img
-          class="h-36 object-cover rounded-xl"
-          src="/equipo/jose.webp"
-          alt="Jose Francisco Pulido"
-        />
-        <div class="p-2 text-center">
-          <h3 class="font-bold text-lg">Jose Francisco Pulido</h3>
-          <p class="text-sm text-gray-600">Delegado de Pastoral</p>
-          <p class="text-xs text-gray-500 mt-1">2do A Secundaria</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Imagen creapibara a la derecha -->
-    <div class="hidden md:block md:mt-32">
-      <img
-        src="/creapibara-team.webp"
-        alt="Team CREA"
-        class="w-[500px] object-contain animate-fade-in filter transition-all duration-300 hover:blur-0 hover:-translate-y-2"
-      />
+      <div class="swiper-pagination"></div>
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
     </div>
   </div>
+
 </section>
+
+<!-- NOTA IMPORTANTE:
+     No uses `type="module"`, `client:load` ni nada especial en <script>.
+     Déjalo simple para que Astro y Vite puedan procesarlo. -->
+     <script>
+      import Swiper from 'swiper/bundle';
+    
+      // Opcional: checar window antes de usar Swiper (evitar SSR).
+      if (typeof window !== 'undefined') {
+        new Swiper('.swiper', {
+          loop: true,
+          spaceBetween: 30,
+          slidesPerView: 1,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          breakpoints: {
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }
+        });
+      }
+    </script>
+

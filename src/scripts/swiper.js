@@ -1,8 +1,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
     loop: true,
     spaceBetween: 30,
     slidesPerView: 1,
@@ -20,4 +19,4 @@ document.addEventListener("DOMContentLoaded", function () {
       1024: { slidesPerView: 3 },
     },
   });
-});
+
