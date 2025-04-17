@@ -3,87 +3,116 @@ import "../styles/card.css";
 import 'swiper/css/bundle';
 ---
 
+<!-- Google Material Symbols Rounded -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 
 <section 
-id="equipo"
-class="
-relative min-h-screen flex flex-col md:flex-row items-center justify-between 
-px-4 md:px-10 overflow-hidden pt-[225px] md:pt-[70px] 
-bg-gradient-to-b from-white to-[#e99f89]/70 py-10 md:py-0">
+  id="equipo"
+  class="
+    relative min-h-screen flex flex-col md:flex-row items-center justify-between 
+    px-4 md:px-10 overflow-hidden pt-[225px] md:pt-[70px] 
+    bg-gradient-to-b from-white to-[#e99f89]/70 py-10 md:py-0">
 
-  
   <div class="container text-center">
-    <h1 class="text-4xl font-bold text-[#df3623] mb-12">Nuestro Equipo</h1>
+    <h1 class="text-4xl font-bold text-[#df3623] mb-12 ">Nuestro Equipo</h1>
 
     <div class="swiper card-wrapper">
-      <ul class="swiper-wrapper card-list ">
-        <!-- tus li swiper-slide tal cual están -->
+      <ul class="swiper-wrapper card-list">
+        <!-- Presidente -->
         <li class="swiper-slide card-item">
-            <a href="#" class="card-link">
-              <img src="/alfonso.png" alt="Alfonso Card" class="card-image">
-              <p class="badge">Presidente</p>
-              <h2 class="card-title">Alfonso Suárez</h2>
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-  
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="/annya.png" alt="Annya Card" class="card-image">
-              <p class="badge">Vicepresidente</p>
-              <h2 class="card-title">Annya Culquicondor</h2>
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-  
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="/diego.png" alt="Diego Card" class="card-image">
-              <p class="badge">Secretario</p>
-              <h2 class="card-title">Diego Sanchez</h2>
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-  
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="/valentino.png" alt="Valentino Card" class="card-image">
-              <p class="badge">Delegado de Cultura</p>
-              <h2 class="card-title">Valentino Cabrera</h2>
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-  
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="/samantha.png" alt="Samantha Card" class="card-image">
-              <p class="badge">Delegada de Ecología</p>
-              <h2 class="card-title">Samantha Guzmán</h2>
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-  
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="/pulido.png" alt="Pulido Card" class="card-image">
-              <p class="badge">Delegado de Pastoral</p>
-              <h2 class="card-title">José Francisco Pulido</h2>
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
+          <a href="#" class="card-link">
+                      <div class="card-image flex items-center justify-center bg-gray-100 mb-4">
+                      <span class="material-symbols-rounded role-icon ">
+                         supervisor_account
+                      </span>
+                    </div>
+            <p class="badge">Presidente</p>
+            <h2 class="card-title">Alfonso Suárez</h2>
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+
+        <!-- Vicepresidente -->
+        <li class="swiper-slide card-item">
+          <a href="#" class="card-link">
+            <div class="card-image flex items-center justify-center bg-gray-100 mb-4">
+              <span class="material-symbols-rounded role-icon ">
+                manage_accounts
+              </span>
+            </div>
+            <p class="badge">Vicepresidente</p>
+            <h2 class="card-title">Annya Culquicondor</h2>
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+
+        <!-- Secretario -->
+        <li class="swiper-slide card-item">
+          <a href="#" class="card-link">
+            <div class="card-image flex items-center justify-center bg-gray-100 mb-4">
+              <span class="material-symbols-rounded role-icon ">
+                description
+              </span>
+            </div>
+            <p class="badge">Secretario</p>
+            <h2 class="card-title">Diego Sanchez</h2>
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+
+        <!-- Delegado de Cultura y Deportes -->
+        <li class="swiper-slide card-item">
+          <a href="#" class="card-link">
+            <div class="card-image flex items-center justify-center bg-gray-100 mb-4">
+              <span class="material-symbols-rounded role-icon ">
+                 exercise
+              </span>
+            </div>
+            <p class="badge">Cultura, Recreación y Deportes</p>
+            <h2 class="card-title">Valentino Cabrera</h2>
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+
+        <!-- Delegada de Ecología -->
+        <li class="swiper-slide card-item">
+          <a href="#" class="card-link">
+            <div class="card-image flex items-center justify-center bg-gray-100 mb-4">
+              <span class="material-symbols-rounded role-icon ">
+                 eco
+              </span>
+            </div>
+            <p class="badge">Ecología y Conservación ambiental</p>
+            <h2 class="card-title">Samantha Guzmán</h2>
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+
+        <!-- Delegado de Pastoral -->
+        <li class="swiper-slide card-item">
+          <a href="#" class="card-link">
+            <div class="card-image flex items-center justify-center bg-gray-100 mb-4">
+              <span class="material-symbols-rounded role-icon ">
+                 church
+              </span>
+            </div>
+            <p class="badge">Pastoral</p>
+            <h2 class="card-title">José Francisco Pulido</h2>
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
       </ul>
 
       <div class="swiper-pagination"></div>
@@ -94,31 +123,27 @@ bg-gradient-to-b from-white to-[#e99f89]/70 py-10 md:py-0">
 
 </section>
 
-<!-- NOTA IMPORTANTE:
-     No uses `type="module"`, `client:load` ni nada especial en <script>.
-     Déjalo simple para que Astro y Vite puedan procesarlo. -->
-     <script>
-      import Swiper from 'swiper/bundle';
-    
-      // Opcional: checar window antes de usar Swiper (evitar SSR).
-      if (typeof window !== 'undefined') {
-        new Swiper('.swiper', {
-          loop: true,
-          spaceBetween: 30,
-          slidesPerView: 1,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          },
-          breakpoints: {
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-          }
-        });
+<script>
+  import Swiper from 'swiper/bundle';
+
+  if (typeof window !== 'undefined') {
+    new Swiper('.swiper', {
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
       }
-    </script>
+    });
+  }
+</script>
