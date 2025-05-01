@@ -1,0 +1,16 @@
+{
+    // para que VS Code use el lenguaje PostCSS en los .css
+    "files.associations": {
+      "*.css": "postcss"
+    },
+    // para que IntelliSense active en tus archivos .astro, .html, .js, etc.
+    "tailwindCSS.includeLanguages": {
+      "postcss": "css",
+      "css": "css",
+      "html": "html",
+      "astro": "html",
+      "javascript": "javascript",
+      "typescript": "javascript"
+    }
+  }
+  

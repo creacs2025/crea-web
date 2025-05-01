@@ -1,0 +1,69 @@
+/* src/components/ImageSlider.css */
+
+.slider-container {
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-hidden {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide-active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Estilos para los botones de navegación */
+.nav-button {
+  color: #1ABC9C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.nav-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 640px) {
+  .slider-container {
+    aspect-ratio: 4/5; /* Más vertical para móviles */
+    max-height: 70vh;
+  }
+  
+  .nav-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    aspect-ratio: 3/4; /* Aún más vertical para móviles pequeños */
+    max-height: 60vh;
+  }
+  
+  .nav-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mejora para la transición de la información del slide */
+.slide-info {
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+}
