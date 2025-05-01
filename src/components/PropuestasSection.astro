@@ -1,67 +1,85 @@
 ---
+// PropuestasSection.astro
 import 'swiper/css/bundle';
 
-// Datos de las propuestas
+// Datos de las propuestas con ruta en public
 const proposals = [
-  { title: 'CREA COMPETENCIA', description: 'Torneos Deportivos Internos para promover el deporte y la sana competencia, e implementar actividad física en recreos.', image: '/creapibara-dt.webp' },
-  { title: 'CREA y EMPRENDE', description: 'Feria de Emprendimientos Juveniles para que estudiantes muestren talento, creatividad e ideas de negocio.', image: '/creapibara-emprende.webp' },
-  { title: 'CREA TALENTOS', description: 'Talent Show Institucional para dar visibilidad a talentos artísticos: danza, teatro, canto, pintura, etc.', image: '/creapibara-talentos.webp' },
-  { title: 'CREA VERDE', description: 'Campañas de reciclaje y cumplimiento del calendario ambiental institucional para impulsar cultura ecológica.', image: '/creapibara-ecologico.webp' },
-  { title: 'CREAMOS VIDA', description: 'Creación de un biohuerto comunitario para reconectar con la naturaleza y aprender producción orgánica sostenible.', image: '/creapibara-biohuerto.webp' },
-  { title: 'CREA EN MOVIMIENTO', description: 'Jornadas de baile temático para fomentar integración, creatividad y respeto mutuo entre niveles.', image: '/creapibara-bailando.webp' },
-  { title: 'CREA TU ESPACIO ACADÉMICO', description: 'Ampliar horario de biblioteca una vez por semana hasta las 4:15 p.m. con cupos de impresión limitados.', image: '/creapibara-espacio-academico.webp' },
-  { title: 'CREA UNIÓN', description: 'Encuentros de integración entre niveles y promociones con dinámicas guiadas que fortalezcan valores.', image: '/creapibara-union.webp' },
-  { title: 'CREA Y COMPARTE', description: 'Apoyo y promoción de campañas de donación organizadas por Pastoral para comunidades vulnerables.', image: '/creapibara-saliendo-caja.webp' },
-  { title: 'CREA ENSEÑANZA', description: 'Grupos de estudio y tutorías entre alumnos en la biblioteca para fortalecer crecimiento académico.', image: '/creapibara-enseñando.webp' },
-  { title: 'CREA Y REUTILIZA', description: 'Caja de hojas reciclables: deposita, registra y gana premios. Informe mensual del ahorro de papel.', image: '/creapibara-recicla-hoja.webp' },
-  { title: 'CREA MULTICULTURAL', description: 'Feria multicultural: cada salón representa un departamento del Perú con gastronomía y actividades.', image: "/creapibara-multicultura-abrazada.webp" }
+  { title: 'CREA COMPETENCIA', description: 'Torneos internos para fomentar deporte y competencia sana.', image: '/creapibara-dt.webp' },
+  { title: 'CREA y EMPRENDE', description: 'Feria de Emprendimientos Juveniles para mostrar talento e ideas de negocio.', image: '/creapibara-emprende.webp' },
+  { title: 'CREA TALENTOS', description: 'Talent Show Institucional para visibilizar danza, teatro, canto, pintura.', image: '/creapibara-talentos.webp' },
+  { title: 'CREA EN MOVIMIENTO', description: 'Jornadas de baile para integración y creatividad.', image: '/creapibara-bailando.webp' },
+  { title: 'CREA TU ESPACIO ACADÉMICO', description: 'Biblioteca ampliada hasta 4:15 p.m.', image: '/creapibara-espacio-academico.webp' },
+  { title: 'CREA UNIÓN', description: 'Dinámicas para fortalecer valores entre niveles.', image: '/creapibara-union.webp' },
+  { title: 'CREA Y COMPARTE', description: 'Campañas de donación organizadas por Pastoral.', image: '/creapibara-saliendo-caja.webp' },
+  { title: 'CREA ENSEÑANZA', description: 'Tutorías entre alumnos en la biblioteca.', image: '/creapibara-enseñando.webp' },
+  { title: 'CREA Y REUTILIZA', description: 'Caja de hojas reciclables con reporte mensual de ahorro.', image: '/creapibara-recicla-hoja.webp' },
+  { title: 'CREA MULTICULTURAL', description: 'Feria multicultural con gastronomía y actividades regionales.', image: '/creapibara-multicultura-abrazada.webp' }
 ];
 ---
 
-<section id="propuestas" class="relative min-h-screen flex flex-col items-center px-4 py-10 bg-gradient-to-b from-white to-[#1abc9c]/70 overflow-hidden md:py-0">
-  <div class="container mx-auto py-27">
+<section id="propuestas" class="min-h-screen py-10 md:py-16 bg-gradient-to-b from-white to-[#1abc9c]/70">
+  <div class="container mx-auto px-4 py-32">
     <h2 class="text-3xl font-semibold text-[#1abc9c] mb-8 text-center">Nuestras Propuestas</h2>
-
     <div class="swiper propuestas-wrapper">
-      <ul class="swiper-wrapper flex gap-6">
-        {proposals.map((p) => (
-          <li class="swiper-slide flex-shrink-0 w-full md:w-1/3 p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow flex flex-col">
-            <!-- Espacio para imagen -->
-            <img src={p.image} alt={p.title} class="w-full h-40 object-contain rounded-md mb-4" />
+      <ul class="swiper-wrapper flex">
+        {proposals.map(p => (
+          <li class="swiper-slide w-full md:w-1/2 p-6 bg-white rounded-2xl shadow-lg flex flex-col">
+            {p.image && <img src={p.image} alt={p.title} class="w-full h-auto max-h-48 object-contain rounded-md mb-4" />}
             <h3 class="text-xl font-semibold mb-2 text-[#1abc9c]">{p.title}</h3>
             <p class="text-gray-700 flex-grow">{p.description}</p>
           </li>
         ))}
       </ul>
       <div class="swiper-pagination mt-6"></div>
-      <div class="swiper-button-prev text-[#1abc9c]"></div>
-      <div class="swiper-button-next text-[#1abc9c]"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
+
+  <style>
+    .swiper-slide { min-height: 350px; }
+    /* Mobile: full width slide */
+    @media (max-width: 768px) {
+      .propuestas-wrapper .swiper-slide { width: 100% !important; }
+    }
+    /* Custom bullets */
+    .swiper-pagination-bullet {
+      background: #1abc9c !important; width: 8px; height: 8px;
+      border-radius: 9999px; opacity: 0.5; margin: 0 4px;
+      transition: all 0.3s ease;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1; width: 12px; height: 12px;
+    }
+    /* Nav buttons */
+    .swiper-button-prev, .swiper-button-next {
+      color: #1abc9c; opacity: 0.5; transition: opacity 0.3s;
+    }
+    .swiper-button-prev:hover, .swiper-button-next:hover { opacity: 1; }
+    @media (max-width: 768px) {
+      .swiper-button-prev, .swiper-button-next { display: none; }
+    }
+  </style>
 </section>
 
 <script>
   import Swiper from 'swiper/bundle';
-
   if (typeof window !== 'undefined') {
     new Swiper('.propuestas-wrapper', {
       loop: true,
-      spaceBetween: 24,
+      spaceBetween: 16,
       slidesPerView: 1,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletClass: 'swiper-pagination-bullet bg-[#1abc9c]',
-        bulletActiveClass: 'swiper-pagination-bullet-active bg-[#1abc9c]'
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      autoplay: { delay: 4000, disableOnInteraction: false },
+      centeredSlides: true,
+      slidesPerGroup: 1,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      autoplay: { delay: 8000, disableOnInteraction: false },
       breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
+        768: {
+          slidesPerView: 2,
+          centeredSlides: false,
+          slidesPerGroup: 1
+        }
       }
     });
   }
